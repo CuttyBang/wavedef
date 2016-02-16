@@ -3,6 +3,7 @@ import { ThreeOscSynth } from '../../lib';
 import AudioControlGroup from '../components/AudioControlGroup.js';
 import Slider from '../components/Slider.js';
 import Switch from '../components/Switch.js';
+import Knob from '../components/Knob.js';
 import WaveSelector from '../components/WaveSelector.js';
 import Keyboard from '../components/Keyboard.js';
 
@@ -52,6 +53,7 @@ export default class ThreeOscSynthUI extends React.Component
           <AudioControlGroup label='Filter'>
             <Slider label='Cutoff Frequency'
               min='50' max='1200' step='5' defaultValue='1200' onInput={filter::filter.setFrequency} />
+          <Knob label='Cutoff Frequency' onInput={filter::filter.setFrequency} />
             <Slider label='Resonance'
               min='1' max = '14' step='0.01' defaultValue='1' onInput={filter::filter.setQ} />
           </AudioControlGroup>

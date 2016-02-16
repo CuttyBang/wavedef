@@ -66,6 +66,14 @@ body {
       }
     }
 
+    &.knob {
+      height: 100px;
+
+      .audio-control-label {
+        margin-bottom: 15px;
+      }
+    }
+
     &.btn-group {
       height: 92px;
     }
@@ -194,6 +202,14 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .icon-xs {
   width: 16px;
   margin-top: -2px;
+}
+
+.audio-control svg path:first-child {
+  fill: #666;
+}
+
+.audio-control rect {
+  fill: #aaa;
 }
 
 .bootstrap-switch {

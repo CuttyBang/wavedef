@@ -19,6 +19,21 @@
     "type": "git",
     "url": "https://github.com/zakangelle/synth.git"
   },
+  "browser": {
+    "jim-knopf": "./node_modules/jim-knopf/lib/knob.js",
+    "jim-knopf-ui": "./node_modules/jim-knopf/lib/ui/ui.js",
+    "jim-knopf-ui-el": "./node_modules/jim-knopf/lib/ui/ui.el.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jim-knopf": "Knob",
+    "jim-knopf-ui": "Ui",
+    "jim-knopf-ui-el": { "depends": ["jim-knopf-ui:Ui"] }
+  },
   "keywords": [
     "synth",
     "synthesizer",
@@ -55,6 +70,7 @@
     "babelify": "^7.2.0",
     "bootstrap": "^3.3.6",
     "browserify": "^13.0.0",
+    "browserify-shim": "^3.8.12",
     "coveralls": "^2.11.6",
     "debug": "^2.2.0",
     "esdoc": "^0.4.4",
@@ -70,6 +86,7 @@
     "gulp-sass": "^2.1.1",
     "history": "^1.17.0",
     "http-server": "^0.8.5",
+    "jim-knopf": "git+https://github.com/eskimoblood/jim-knopf.git",
     "mousetrap": "^1.5.3",
     "nodemock": "^0.3.4",
     "notes-to-frequencies": "^1.0.0",
